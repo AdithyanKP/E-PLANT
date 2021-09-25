@@ -1,0 +1,29 @@
+
+<div class="container"> 
+  <img src="images/Greengiftingbanner.webp" class="img-fluid" alt="..." style="mt:35px;">
+ <div class="all-products">
+   <h1 style="font-family: serif;font-weight:500;margin-top:39px;">ALL PRODUCTS</h1>
+ </div>
+ <section style="margin-top:50px;">
+   <div class="row" style="margin-left: 74px;">
+
+     
+     {{#each rows}}
+     <div class="col-md-3">
+       <div class="card" style="width: 15rem;">
+  <img src="/product-images/{{this.id}}.jpeg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{this.Name}}</h5>
+    <p class="card-text">{{this.Category}}</p>
+    <p class="card-text">{{this.Price}}</p>
+    <a href="/add-to-cart/{{this.id}}" class="btn btn-primary">Add to Cart</a>
+    
+  </div>
+</div>
+     </div>
+     {{/each}}
+    
+   </div>
+   </div>
+  </section>
+  

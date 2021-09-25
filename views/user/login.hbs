@@ -1,0 +1,33 @@
+
+<link rel='stylesheet' href='/stylesheets/userlogin.css' />
+<div class="row" style="margin-top: 70px;
+    margin-bottom: 150px;"> 
+
+    
+    <div class="col-md-6 m-auto">
+        <div class="container mt-5 pl-5">
+            <h2 class="text-center" style="font-family: serif;font-weight:600;font-size:50px;">Login</h2>
+            <form action="/login" method="POST">
+            {{#if loginErr}}
+             <p class="error" style="color: red;font-family:serif;font-size:25px;">{{loginErr}}</p>
+             {{/if}}
+
+                <div class="form-group">
+                    <label style="font-size: 20px;">Email Address</label>
+
+                    <input type="email" style="box-shadow:0 2px 20px 0 lightgreen;" class="form-control" name="Email" placeholder="Enter email">
+
+                
+                    </div>
+                    <div class="form-group" style="margin-top: 11px;">
+                        <label style="font-size: 20px;">Password</label>
+                        <input type="password" style="box-shadow:0 2px 20px 0 lightgreen;" class="form-control" name="Password" placeholder="Password">
+                    </div>
+                    <a href="/signup" style="font-size: 16px;">Create new account ?</a>
+                    <button type="submit" class="btn btn-success" style="width: 100px;height:50px;font-size:20px;margin-top:12px;">Login</button>
+    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

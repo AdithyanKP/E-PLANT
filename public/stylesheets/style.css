@@ -1,0 +1,284 @@
+
+
+.img-responsive{
+  max-width: 100%;
+  max-height: 100%;
+}
+.container-fluid{
+  overflow:hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.carousal-item{
+  height: 32rem;
+  background: #777;
+}
+/* main slider*/
+.main_slider{
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 46px;
+}
+.main_slider_content{
+  width: 60%;
+
+}
+.main_slider_content h6{
+  font-weight:300;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  font-size: 35px;
+  
+
+}
+.main_slider_content h1{
+  font-weight: 200;
+  line-height: 1;
+  
+  
+}
+.red_button{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  background: darkgreen;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+
+}
+.red_button a{
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+  width: 100px;
+
+}
+.red_button:hover{
+  background: darkgreen;
+}
+.shop_now_button{
+  width: 140px;
+  margin-top: 32px;
+}
+/* best sellers */
+.container{
+  width: 100%;
+  margin-top:0%;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  
+}
+.container h2{
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight:400;
+
+}
+.row{
+  margin-top: 10px;
+  ;
+
+}
+img{
+  width: 100%;
+
+}
+.product-bottom h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-bottom h5{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.overlay{
+  margin-left: 20px;
+  
+}
+.responsive{
+  width:100%;
+  height:auto;
+}
+/*footer*/
+*
+{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family:'poppins',sans-serif;
+}
+body{
+  
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 100vh;
+  flex-direction: column;
+  background:white;
+}
+footer{
+  position:relative;
+  width:100%;
+  height:auto;
+  padding: 50px 100px;
+  background:black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+}
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+footer .container .sec{
+  margin-right: 30px;
+
+
+}
+footer .container .sec.aboutus{
+  width: 40%;
+
+}
+footer .container  h2{
+  position: relative;
+  color:white;
+  font-weight:500;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+footer .container  h2:before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left:0%;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+footer  p{
+  color:white;
+}
+.sci{
+  margin-top:20px;
+  display: flex;
+  margin-left: -32px;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border: 4px;
+
+}
+.sci li a:hover{
+  background:green;
+
+}
+.sci li a .fa{
+  color:white;
+  font-size: 25px;
+}
+.quicklinks{
+  position:relative;
+  width:25%;
+}
+.quicklinks ul li {
+  list-style:none;
+  margin-left: -32px;
+}
+.quicklinks ul li a{
+  color:#999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quicklinks ul li a:hover{
+  color: white;
+}
+.contact {
+  width: calc(35%-60px);
+  margin-right: 0 !important;
+}
+.contact .info{
+  position:relative;
+  margin-left: -31px;
+
+}
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+  color:white;
+  font-size: 20px;
+  margin-right: 10px;
+
+}
+.contact .info li span{
+  color: #999;
+}
+.contact .info li  a{
+  color: #999;
+  text-decoration: none;
+}
+.contact .info li a:hover{
+  color:white;
+}
+.copyrightText{
+  width: 100%;
+  background:#181818;
+  padding: 8px 100px;
+  text-align: center;
+  color:white;
+}
+@media (max-width:991px){
+  footer{
+    padding: 40px;
+  }
+  footer .container{
+    flex-direction: column;
+  }
+  footer .container .sec{
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+  footer .container .sec.aboutus,.quicklinks,.contact{
+    width:100%;
+  }
+  .copyrightText{
+    width: 100%;
+    background:#181818;
+    padding: 8px 40px;
+    text-align: center;
+    color:white;
+  }
+  
+  }
+  
+  
+
+  
+

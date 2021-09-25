@@ -1,0 +1,74 @@
+<link rel='stylesheet' href='/stylesheets/cart.css' />
+<section style="margin-top: 115px;
+    margin-left: 55px;">
+    <div class="conatiner">
+        <table class="table mt-5" id="cartTable">
+            <thead>
+               <tr>
+                  <th scope="col">Item</th>
+                   <th scope="col">Title</th>
+                   <th scope="col">Price</th>
+                   <th scope="col">Quantity</th>
+                   <th>Options</th>
+
+               </tr>
+           </thead>
+           <tbody>
+               {{#each result}}
+               <tr>
+                   <td><img style="width:150px;height:150px;" src="/product-images/{{this.id}}.jpeg" alt=""></td>
+                   <td>{{this.Name}}</td>
+                   <td>Rs{{this.price}}</td>
+                   
+                   <td>
+                       <button class="btn btn-danger" onclick="ChangeQuantity('{{this.userId}}','{{this.id}}',-1)">- </button> 
+                       <span id="{{this.id}}">{{this.quantity}}</span> 
+                        <button class="btn btn-success" onclick="ChangeQuantity('{{this.userId}}','{{this.id}}',1)">+</button>
+
+                   </td>
+                   <td>
+                       <a href="/delete-cart/{{this.id}}" class="btn btn-danger" onclick="return confirm('Are you want to Delete {{this.Name}}?')">Remove</a>
+                   </td>
+               </tr>
+               {{/each}}
+           </tbody>
+        </table>
+        <hr>
+        {{#each total}}
+        <h3 class="class" style="margin-left:1000px;font-family:serif;">Total Amount:Rs.<span id="total">{{this.total}}</span></h3>
+        {{/each}}
+        <a href="/place-order" class="btn btn-primary" style="margin-left: 1000px;
+    width: 268px;margin-top:10px;">Place Order</a>
+    </div>
+</section>
+<script>
+    function ChangeQuantity(userId,id,count){
+        let  quantity=parseInt(document.getElementById(id).innerHTML)
+        $.ajax({
+            url:'/change-product-quantity',
+            data:{
+                user:userId,
+                product:id,
+                count:count,
+                quantity:quantity
+
+            },
+            method:'post',
+            success:(result,)=>{
+                if (result.removeProduct){
+                    alert("product removed from cart")
+                    location.reload()
+                }else{
+                    document.getElementById(id).innerHTML=quantity+count
+                    document.getElementById('total').innerHTML=result[0].total
+                }
+                
+            }
+        })
+    }
+    $(function () {
+    $('#cartTable').DataTable();
+});
+</script>
+
+   

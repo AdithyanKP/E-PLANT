@@ -1,4 +1,4 @@
-###`npm install`
+### `npm install`
 
 Runs this command for installing dependencies
 
